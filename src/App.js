@@ -1,7 +1,10 @@
+import React from "react";
+import Setup from "./1-useState/5-useState-counter";
+
 function App() {
   return (
-    <div className="App">
-      <h3>hello people</h3>
+    <div>
+      <Setup />
     </div>
   );
 }
