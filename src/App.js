@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Setup from "./2-useEffect/2-useEffect-cleanUp-function";
+import React from "react";
+import Setup from "./2-useEffect/3-useEffect-fetch-data";
 
 function App() {
   return (
