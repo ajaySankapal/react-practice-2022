@@ -1,9 +1,9 @@
 import React from "react";
-import Setup from "./3-conditional-rendering/1-multiple-returns";
+import Setup from "./3-conditional-rendering/3-show-hide-component";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Setup />
     </div>
   );
