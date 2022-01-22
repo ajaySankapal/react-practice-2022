@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./3-conditional-rendering/3-show-hide-component";
+import Setup from "./4-forms/1-controlled-inputs";
 
 function App() {
   return (
