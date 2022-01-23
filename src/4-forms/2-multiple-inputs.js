@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/js/src/util/";
 //well now..! what if we have to include multiple input fields in our forms. so do we need to maintain multiple states for that multiple input fields? you can. but we have this functionality to create only one state and target that input fields in that state only by passing an object as its initial state
@@ -8,6 +8,7 @@ const MultipleInputs = () => {
   //   const [age, setAge] = useState("");
   const [person, setPerson] = useState({ firstName: "", email: "", age: "" });
   const [people, setPeople] = useState([]);
+  const refFocus = useRef(null);
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -19,6 +20,7 @@ const MultipleInputs = () => {
       const newPerson = { ...person, id: new Date().getTime.toString() };
       setPeople([...people, newPerson]);
       setPerson({ firstName: "", email: "", age: "" });
+      refFocus.current.focus();
     }
   };
   return (
@@ -34,6 +36,7 @@ const MultipleInputs = () => {
               className="form-control"
               value={person.firstName}
               onChange={handleChange}
+              ref={refFocus}
             />
           </div>
           <div className="form-group">
